@@ -129,6 +129,12 @@
             android:layout_height="match_parent"
             android:background="#DAB0B0">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/heritage"/>
+
 
 
 
@@ -173,6 +179,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:src="@drawable/tajmahal"
                 android:layout_gravity="center_horizontal"/>
 
 
@@ -205,6 +212,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:src="@drawable/suntemple"
                 android:layout_gravity="center_horizontal"/>
 
 
@@ -213,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/atma"
-                android:text="Tajmahal"
+                android:text="Sun Temple"
                 android:textColor="#FF9933"
                 android:textSize="16sp" />
 
@@ -238,6 +246,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:src="@drawable/sundarban"
                 android:layout_gravity="center_horizontal"/>
 
 
@@ -246,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/atma"
-                android:text="Tajmahal"
+                android:text="Sundarban"
                 android:textColor="#FF9933"
                 android:textSize="16sp" />
 
@@ -271,6 +280,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:src="@drawable/ajanta"
                 android:layout_gravity="center_horizontal"/>
 
 
@@ -279,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/atma"
-                android:text="Tajmahal"
+                android:text="Ajanta Cave"
                 android:textColor="#FF9933"
                 android:textSize="16sp" />
 
