@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1069EC"
+            android:background="#3F8DFF"
             android:orientation="horizontal">
 
 
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aubrey"
                     android:text="14th Century"
-                    android:textColor="#FFB8E3"
+                    android:textColor="#6A1B9A"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:text="Location"
                         android:layout_gravity="center_vertical"
-                        android:textColor="#FF9933"
+                        android:textColor="#EF6C00"
                         android:textSize="13sp" />
 
 
