@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#3F8DFF"
+            android:background="#163B73"
             android:orientation="horizontal">
 
 
@@ -38,6 +38,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/place_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/heritage"
@@ -66,6 +67,7 @@
 
 
                 <TextView
+                    android:id="@+id/place_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
@@ -74,11 +76,12 @@
                     android:textSize="17sp"/>
 
                 <TextView
+                    android:id="@+id/place_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aubrey"
                     android:text="14th Century"
-                    android:textColor="#6A1B9A"
+                    android:textColor="#DCA2FF"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -96,11 +99,12 @@
 
 
                     <TextView
+                        android:id="@+id/place_state"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location"
                         android:layout_gravity="center_vertical"
-                        android:textColor="#EF6C00"
+                        android:textColor="#FDB3D3"
                         android:textSize="13sp" />
 
 
