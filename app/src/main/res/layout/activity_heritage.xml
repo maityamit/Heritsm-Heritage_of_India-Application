@@ -81,6 +81,7 @@
 
 
         <TextView
+            android:id="@+id/place_name_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TazMahal"
@@ -112,6 +113,7 @@
 
 
                     <ImageView
+                        android:id="@+id/place_name_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"/>
@@ -136,6 +138,7 @@
 
 
                     <TextView
+                        android:id="@+id/place_name_location"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location"
@@ -150,6 +153,7 @@
 
 
                 <TextView
+                    android:id="@+id/place_name_period"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aubrey"
@@ -178,13 +182,14 @@
 
 
                     <TextView
+                        android:id="@+id/place_name_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Short Description"
                         android:layout_marginStart="10dp"
                         android:layout_gravity="center_vertical"
                         android:textColor="#63F36B"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
 
 
@@ -194,15 +199,6 @@
 
 
 
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp"
-                    android:text="Little Shit"/>
 
 
 
@@ -259,6 +255,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:background="#138808"
+            android:id="@+id/place_name_go_to"
             android:gravity="center"
             android:layout_weight="1">
 
