@@ -1,6 +1,14 @@
 # Heritsm-Heritage_of_India
 Heritsm-Heritage_of_India
 
+## ⚙️ Technology Used
+<img src="https://github.com/devicons/devicon/blob/master/icons/android/android-plain.svg" alt="Android" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank">  
+
+## 📸 Screenshots
+
+||||
+|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
+| ![Imgur](Demo/1.jpg) | ![Imgur](Demo/2.jpg) | ![Imgur](Demo/3.jpg) |
 
 <h2 align="center">📝 Created by </h2>
 
