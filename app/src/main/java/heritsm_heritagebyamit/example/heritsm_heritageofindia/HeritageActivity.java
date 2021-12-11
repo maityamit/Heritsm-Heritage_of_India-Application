@@ -3,9 +3,12 @@ package heritsm_heritagebyamit.example.heritsm_heritageofindia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,12 +18,14 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class HeritageActivity extends AppCompatActivity {
 
     DatabaseReference RootRef;
     TextView place_namee,place_periodd,place_loc,place_desccc;
     LinearLayout place_go_to;
+    ImageView imageView;
     String go_to_link = "";
 
     @Override
@@ -35,16 +40,28 @@ public class HeritageActivity extends AppCompatActivity {
         place_periodd = findViewById(R.id.place_name_period);
         place_loc = findViewById(R.id.place_name_location);
         place_desccc = findViewById(R.id.place_name_desc);
+        imageView = findViewById(R.id.place_name_image);
 
 
         RootRef = FirebaseDatabase.getInstance ().getReference ().child("Sites");
 
         RetriveData(key);
 
+
         place_go_to.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(go_to_link));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setPackage("com.android.chrome");
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException ex) {
+                    // Chrome browser presumably not installed so allow user to choose instead
+                    intent.setPackage(null);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -73,6 +90,8 @@ public class HeritageActivity extends AppCompatActivity {
                     go_to_link = place_go_to;
 
                     place_desccc.setText(place_description);
+                    Picasso.with(HeritageActivity.this).load(place_image).into(imageView);
+
 
 
 

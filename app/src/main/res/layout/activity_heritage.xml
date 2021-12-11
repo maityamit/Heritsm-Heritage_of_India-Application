@@ -9,7 +9,7 @@
 
 
     <LinearLayout
-        android:layout_below="@id/hanka"
+        android:layout_above="@id/hanka"
         android:layout_width="match_parent"
         android:layout_marginBottom="5dp"
         android:layout_height="wrap_content"
@@ -95,6 +95,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -169,6 +169,7 @@
 
 
         <LinearLayout
+            android:id="@+id/main_page_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -202,6 +203,7 @@
 
 
         <LinearLayout
+            android:id="@+id/main_page_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -236,6 +238,7 @@
 
 
         <LinearLayout
+            android:id="@+id/main_page_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -270,6 +273,7 @@
 
 
         <LinearLayout
+            android:id="@+id/main_page_4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -371,6 +375,8 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal"
         android:text="About Us"/>
@@ -379,6 +385,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
         android:layout_gravity="center_horizontal"
         android:text="Contact Us"/>
 
