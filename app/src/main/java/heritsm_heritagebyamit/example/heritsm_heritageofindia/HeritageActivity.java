@@ -3,6 +3,7 @@ package heritsm_heritagebyamit.example.heritsm_heritageofindia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -27,6 +28,7 @@ public class HeritageActivity extends AppCompatActivity {
     LinearLayout place_go_to;
     ImageView imageView;
     String go_to_link = "";
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,12 @@ public class HeritageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_heritage);
         Intent intent = getIntent();
         String key = intent.getStringExtra("ID");
+
+
+        progressDialog = new ProgressDialog( HeritageActivity.this);
+        progressDialog.setContentView ( R.layout.loading );
+        progressDialog.setTitle ( "Please Wait..." );
+        progressDialog.setCanceledOnTouchOutside ( false );
 
         place_go_to = findViewById(R.id.place_name_go_to);
         place_namee = findViewById(R.id.place_name_detail);
@@ -69,6 +77,7 @@ public class HeritageActivity extends AppCompatActivity {
     }
 
     private void RetriveData(String key) {
+        progressDialog.show();
 
         RootRef.child(key).addValueEventListener(new ValueEventListener() {
             @Override
@@ -90,7 +99,8 @@ public class HeritageActivity extends AppCompatActivity {
                     go_to_link = place_go_to;
 
                     place_desccc.setText(place_description);
-                    Picasso.with(HeritageActivity.this).load(place_image).into(imageView);
+                    Picasso.get().load(place_image).into(imageView);
+                    progressDialog.dismiss();
 
 
 

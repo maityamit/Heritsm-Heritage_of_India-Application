@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class HeritageListActivity extends AppCompatActivity {
     RecyclerView recyclerView ;
     DatabaseReference RootRef;
     GridLayoutManager gridLayoutManager;
+    ProgressDialog progressDialog;
     ImageView cart_butoon;
     String string;
 
@@ -41,6 +43,10 @@ public class HeritageListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heritage_list);
 
+        progressDialog = new ProgressDialog( HeritageListActivity.this);
+        progressDialog.setContentView ( R.layout.loading );
+        progressDialog.setTitle ( "Please Wait..." );
+        progressDialog.setCanceledOnTouchOutside ( false );
         recyclerView = findViewById(R.id.recycler_view_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(HeritageListActivity.this));
 
@@ -49,6 +55,7 @@ public class HeritageListActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        progressDialog.show();
 
         RootRef = FirebaseDatabase.getInstance ().getReference ().child("Sites");
 
@@ -69,8 +76,9 @@ public class HeritageListActivity extends AppCompatActivity {
                         holder.prDate.setText(model.getPeriod());
                         holder.prName.setText(model.getPlace_name());
                         holder.prState.setText(model.getLocation());
-                        Picasso.with(HeritageListActivity.this).load(model.getImage()).into(holder.prImg);
+                        Picasso.get().load(model.getImage()).into(holder.prImg);
 
+                        progressDialog.dismiss();
 
                        holder.itemView.setOnClickListener(new View.OnClickListener() {
                            @Override
