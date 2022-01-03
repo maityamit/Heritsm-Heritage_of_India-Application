@@ -3,15 +3,21 @@ package heritsm_heritagebyamit.example.heritsm_heritageofindia;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
     RelativeLayout relativeLayout;
     LinearLayout linearLayout1,linearLayout2,linearLayout3,linearLayout4;
+    TextView contact,about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,28 @@ public class MainActivity extends AppCompatActivity {
         linearLayout2 = findViewById(R.id.main_page_2);
         linearLayout3 = findViewById(R.id.main_page_3);
         linearLayout4 = findViewById(R.id.main_page_4);
+        about = findViewById(R.id.about_us);
+        contact = findViewById(R.id.contact_us);
+        
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String inURL = "https://www.linkedin.com/in/maityamit/";
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( inURL ) );
+
+                startActivity( browse );
+            }
+        });
+
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String inURL = "https://www.linkedin.com/in/maityamit/";
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( inURL ) );
+
+                startActivity( browse );
+            }
+        });
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override

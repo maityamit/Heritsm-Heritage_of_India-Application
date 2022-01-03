@@ -7,8 +7,9 @@ android {
 
     defaultConfig {
         applicationId "heritsm_heritagebyamit.example.heritsm_heritageofindia"
-        minSdkVersion 18
+        minSdkVersion 19
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
