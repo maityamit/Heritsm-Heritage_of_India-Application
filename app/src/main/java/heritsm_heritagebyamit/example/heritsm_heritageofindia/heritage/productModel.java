@@ -1,4 +1,8 @@
-package heritsm_heritagebyamit.example.heritsm_heritageofindia;
+package heritsm_heritagebyamit.example.heritsm_heritageofindia.heritage;
+
+import android.util.Pair;
+
+import java.util.ArrayList;
 
 public class productModel {
     public String description, image , location, period,place_name;
@@ -15,6 +19,7 @@ public class productModel {
 
     public productModel() {
     }
+
 
     public String getDescription() {
         return description;

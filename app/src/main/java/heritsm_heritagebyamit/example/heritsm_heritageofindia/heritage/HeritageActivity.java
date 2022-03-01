@@ -1,4 +1,4 @@
-package heritsm_heritagebyamit.example.heritsm_heritageofindia;
+package heritsm_heritagebyamit.example.heritsm_heritageofindia.heritage;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import heritsm_heritagebyamit.example.heritsm_heritageofindia.R;
 
 public class HeritageActivity extends AppCompatActivity {
 
@@ -37,6 +38,27 @@ public class HeritageActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String key = intent.getStringExtra("ID");
 
+        InitializeMethods();
+
+        RetriveData(key);
+
+
+
+        place_go_to.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GoToLink();
+            }
+        });
+
+
+    }
+
+
+
+
+    private void InitializeMethods() {
+
 
         progressDialog = new ProgressDialog( HeritageActivity.this);
         progressDialog.setContentView ( R.layout.loading );
@@ -53,26 +75,20 @@ public class HeritageActivity extends AppCompatActivity {
 
         RootRef = FirebaseDatabase.getInstance ().getReference ().child("Sites");
 
-        RetriveData(key);
+    }
 
+    private void GoToLink() {
 
-        place_go_to.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(go_to_link));
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setPackage("com.android.chrome");
-                try {
-                    startActivity(intent);
-                } catch (ActivityNotFoundException ex) {
-                    // Chrome browser presumably not installed so allow user to choose instead
-                    intent.setPackage(null);
-                    startActivity(intent);
-                }
-            }
-        });
-
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(go_to_link));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setPackage("com.android.chrome");
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException ex) {
+            // Chrome browser presumably not installed so allow user to choose instead
+            intent.setPackage(null);
+            startActivity(intent);
+        }
 
     }
 

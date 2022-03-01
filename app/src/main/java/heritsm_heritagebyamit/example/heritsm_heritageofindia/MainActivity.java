@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.net.URL;
+import heritsm_heritagebyamit.example.heritsm_heritageofindia.heritage.HeritageActivity;
+import heritsm_heritagebyamit.example.heritsm_heritageofindia.heritage.HeritageListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,HeritageListActivity.class);
+                Intent intent = new Intent(MainActivity.this, HeritageListActivity.class);
                 startActivity(intent);
             }
         });
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void CreateaListactivate(String s) {
 
-        Intent intent1 = new Intent(MainActivity.this,HeritageActivity.class);
+        Intent intent1 = new Intent(MainActivity.this, HeritageActivity.class);
         intent1.putExtra("ID",s);
         startActivity(intent1);
 

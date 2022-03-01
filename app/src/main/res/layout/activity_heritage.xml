@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#163B73"
     android:layout_height="match_parent"
-    tools:context=".HeritageActivity">
+    tools:context=".heritage.HeritageActivity">
 
 
     <LinearLayout
