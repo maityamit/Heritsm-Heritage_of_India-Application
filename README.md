@@ -8,7 +8,7 @@ Heritsm-Heritage_of_India
 
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![Imgur](Demo/1.jpg) | ![Imgur](Demo/2.jpg) | ![Imgur](Demo/3.jpg) |
+| ![Imgur](Demo/1.png) | ![Imgur](Demo/2.png) | ![Imgur](Demo/3.png) |
 
 <h2 align="center">📝 Created by </h2>
 
