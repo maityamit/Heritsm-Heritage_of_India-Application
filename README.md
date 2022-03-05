@@ -3,7 +3,7 @@ Heritsm : Heritages of India
 
 ## 🔗 Download the App 
 
-<a href="https://play.google.com/store/apps/details?id=heritsm_heritagebyamit.example.heritsm_heritageofindia"><img src="https://raw.githubusercontent.com/maityamit/Tracky-Track-your-goals-or-targets/master/Images%20Demo/firebase_St.png" width="25%" /></a>
+<a href="https://play.google.com/store/apps/details?id=heritsm_heritagebyamit.example.heritsm_heritageofindia"><img src="https://github.com/maityamit/Heritsm-Heritage_of_India-Application/blob/master/Demo/800px-Google_Play_Store_badge_EN.svg.png" width="20%" /></a>
 
 ## ⚙️ Technology Used
 
